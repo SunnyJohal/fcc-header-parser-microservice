@@ -2,18 +2,13 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-// MiddlewaSunnyJohal/fcc-header-parser-microserviceres
+// Middlewares...
 app.use(cors({ optionSuccessStatus: 200 }));
 app.use(express.static("public"));
 
-// http://expressjs.com/en/starter/basic-routing.html
+// Index route...
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
-});
-
-// your first API endpoint...
-app.get("/api/hello", (req, res) => {
-  res.json({ greeting: "hello API" });
 });
 
 // Whoami endpoint...
